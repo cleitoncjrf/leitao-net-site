@@ -1,5 +1,5 @@
 export const empresa = {
-  nome: "Leitaão Net",
+  nome: "Leitão Net",
   slogan: "Conectando você ao mundo.",
   historia:
     "A Leitão Net foi fundada por Cleiton Junior, atual CEO da empresa, e Caio Felipe, cofundador, a partir da ideia de criar uma empresa de tecnologia moderna, acessível e inovadora. O projeto surgiu da paixão dos dois pela informática e pela vontade de oferecer soluções digitais para pessoas e empresas, começando com serviços relacionados à internet, desenvolvimento de sites, sistemas e suporte técnico. Com o crescimento da empresa, a Leitão Net passou a buscar novas tecnologias e formas de ajudar seus clientes a utilizarem a tecnologia de maneira mais simples e eficiente. O nome Leitão Net foi escolhido para representar uma marca jovem, diferente e fácil de lembrar. Atualmente, a empresa tem como objetivo continuar crescendo, desenvolvendo soluções tecnológicas de qualidade e construindo uma marca reconhecida pela inovação, criatividade e compromisso com seus clientes.",
@@ -38,21 +38,21 @@ export const empresa = {
     {
       nome: "Cleiton Júnior",
       cargo: "CEO / Diretor Executivo",
-      foto: "/images/cleiton.jpg",
+      foto: "/images/cleiton.png",
       alt: "Foto de Cleiton Júnior",
       descricao: "Fundador e Diretor Executivo da Leitão Net, responsável pela liderança estratégica, gestão geral e tomada de decisões, conduzindo o crescimento e o desenvolvimento da empresa."
     },
     {
       nome: "Caio Felipe",
       cargo: "Cofundador / Diretor de Tecnologia",
-      foto: "/images/caio.jpg",
+      foto: "/images/caio.png",
       alt: "Foto de Caio Felipe",
       descricao: "Cofundador e responsável pela direção tecnológica da empresa, liderando o desenvolvimento de soluções digitais, projetos de programação e inovação tecnológica."
     },
     {
       nome: "Jair Bolsonaro",
       cargo: "Gerente de Projetos",
-      foto: "/images/jair.jpg",
+      foto: "/images/jair.png",
       alt: "Foto de Jair Bolsonaro",
       descricao: "Responsável pelo planejamento, organização e acompanhamento dos projetos, coordenando prazos, tarefas e equipes para garantir a execução eficiente de cada iniciativa."
     }
