@@ -1,60 +1,36 @@
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sobre Nós | Leitão Net</title>
-	</head>
-	<body>
-		<header>
-			<strong>Leitão Net</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-		<main>
-			<section>
-				<h1>Sobre a Leitão Net</h1>
-				<p>A Leitão Net foi fundada por Cleiton Junior, atual CEO da empresa, e Caio Felipe, cofundador, a partir da ideia de criar uma empresa de tecnologia moderna, acessível e inovadora. O projeto surgiu da paixão dos dois pela informática e pela vontade de oferecer soluções digitais para pessoas e empresas, começando com serviços relacionados à internet, desenvolvimento de sites, sistemas e suporte técnico. Com o crescimento da empresa, a Leitão Net passou a buscar novas tecnologias e formas de ajudar seus clientes a utilizarem a tecnologia de maneira mais simples e eficiente. O nome Leitão Net foi escolhido para representar uma marca jovem, diferente e fácil de lembrar. Atualmente, a empresa tem como objetivo continuar crescendo, desenvolvendo soluções tecnológicas de qualidade e construindo uma marca reconhecida pela inovação, criatividade e compromisso com seus clientes.</p>
-			</section>
+<LayoutBase 
+	titulo="Sobre Nós" 
+	descricao={`Conheça a história e os valores da ${empresa.nome}.`}
+>
+	<section>
+		<h1>Sobre a {empresa.nome}</h1>
+		<p>{empresa.historia}</p>
+	</section>
 
-			<section>
-				<h2>Missão</h2>
-				<p>Oferecer soluções tecnológicas acessíveis, inovadoras e eficientes, ajudando pessoas e empresas a crescerem por meio da tecnologia.</p>
-			</section>
+	<section>
+		<h2>Missão</h2>
+		<p>{empresa.missao}</p>
+	</section>
 
-			<section>
-				<h2>Visão</h2>
-				<p>Ser uma empresa de tecnologia reconhecida pela inovação, qualidade e confiança, expandindo seus serviços e alcançando cada vez mais clientes.</p>
-			</section>
+	<section>
+		<h2>Visão</h2>
+		<p>{empresa.visao}</p>
+	</section>
 
-			<section>
-				<h2>Nossos Valores</h2>
-				<ul>
-					<li>
-						<h3>Inovação</h3>
-						<p>Buscar sempre novas ideias e tecnologias.</p>
-					</li>
-					<li>
-						<h3>Qualidade</h3>
-						<p>Entregar serviços eficientes e bem desenvolvidos.</p>
-					</li>
-					<li>
-						<h3>Compromisso</h3>
-						<p>Valorizar os clientes e cumprir aquilo que a empresa promete.</p>
-					</li>
-				</ul>
-			</section>
-		</main>
-
-		<footer>
-			<p>&copy; 2026 Leitão Net. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+	<section>
+		<h2>Nossos Valores</h2>
+		<ul>
+			{empresa.valores.map((valor) => (
+				<li>
+					<h3>{valor.titulo}</h3>
+					<p>{valor.descricao}</p>
+				</li>
+			))}
+		</ul>
+	</section>
+</LayoutBase>
