@@ -55,6 +55,14 @@ export const empresa = {
       foto: "/images/jair.png",
       alt: "Foto de Jair Bolsonaro",
       descricao: "Responsável pelo planejamento, organização e acompanhamento dos projetos, coordenando prazos, tarefas e equipes para garantir a execução eficiente de cada iniciativa."
-    }
+    },
+    {
+      nome: "Rafael Mendes",
+      cargo: "Analista de Infraestrutura e Segurança",
+      foto: "/images/rafael.png",
+      alt: "Foto de Rafael Mendes",
+      descricao: "Responsável pela infraestrutura tecnológica da Leitão Net, atuando na manutenção de servidores, monitoramento de sistemas, segurança digital e estabilidade dos serviços. Trabalha para garantir que os projetos da empresa funcionem com desempenho, confiabilidade e segurança."
+    } 
+    
   ]
 };
