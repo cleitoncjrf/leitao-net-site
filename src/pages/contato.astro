@@ -1,72 +1,116 @@
+
 ---
 import LayoutBase from '../layouts/LayoutBase.astro';
 import Cartao from '../components/Cartao.astro';
 import { empresa } from '../data/empresa.js';
 ---
 
-<LayoutBase 
-	titulo="Fale Conosco" 
-	descricao={`Entre em contato com a ${empresa.nome}.`}
+<LayoutBase
+    titulo="Fale Conosco"
+    descricao={`Entre em contato com a ${empresa.nome}.`}
 >
-	<section class="secao">
-		<div class="container">
-			<div class="cabecalho-secao">
-				<h1>Fale Conosco</h1>
-				<p>Deseja construir uma solução de software sob medida para o seu negócio? Entre em contato com a {empresa.nome}!</p>
-			</div>
+    <section class="secao">
+        <div class="container">
 
-			<div class="grid-contato">
-				<Cartao>
-					<h2>Nossa Sede</h2>
-					<address>
-						{empresa.contato.endereco.logradouro}, {empresa.contato.endereco.complemento}<br/>
-						{empresa.contato.endereco.bairro}<br/>
-						{empresa.contato.endereco.cidadeEstado}<br/>
-						CEP: {empresa.contato.endereco.cep}
-					</address>
-				</Cartao>
+            <!-- Imagem da fachada -->
+            <div class="imagem-fachada">
+                <img
+                    src="/images/fachada.png"
+                    alt={`Fachada da ${empresa.nome}`}
+                />
+            </div>
 
-				<Cartao>
-					<h2>Canais Digitais</h2>
-					<p><strong>E-mail:</strong> <a href={`mailto:${empresa.contato.email}`}>{empresa.contato.email}</a></p>
-					<p><strong>Telefone:</strong> {empresa.contato.telefone}</p>
-				</Cartao>
-			</div>
-		</div>
-	</section>
+            <div class="cabecalho-secao">
+                <h1>Fale Conosco</h1>
+                <p>
+                    Deseja construir uma solução de software sob medida
+                    para o seu negócio? Entre em contato com a {empresa.nome}!
+                </p>
+            </div>
+
+            <div class="grid-contato">
+
+                <Cartao>
+                    <h2>Nossa Sede</h2>
+                    <address>
+                        {empresa.contato.endereco.logradouro}, {empresa.contato.endereco.complemento}<br />
+                        {empresa.contato.endereco.bairro}<br />
+                        {empresa.contato.endereco.cidadeEstado}<br />
+                        CEP: {empresa.contato.endereco.cep}
+                    </address>
+                </Cartao>
+
+                <Cartao>
+                    <h2>Canais Digitais</h2>
+                    <p>
+                        <strong>E-mail:</strong>
+                        <a href={`mailto:${empresa.contato.email}`}>
+                            {empresa.contato.email}
+                        </a>
+                    </p>
+                    <p>
+                        <strong>Telefone:</strong>
+                        {empresa.contato.telefone}
+                    </p>
+                </Cartao>
+
+            </div>
+        </div>
+    </section>
 </LayoutBase>
 
 <style>
-	.cabecalho-secao {
-		margin-bottom: 3rem;
-	}
+    .imagem-fachada {
+        width: 100%;
+        margin-bottom: 2.5rem;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
 
-	.cabecalho-secao p {
-		font-size: 1.125rem;
-		color: var(--cor-texto-secundario);
-	}
+    .imagem-fachada img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        display: block;
+    }
 
-	.grid-contato {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 2rem;
-	}
+    .cabecalho-secao {
+        margin-bottom: 3rem;
+    }
 
-	.grid-contato h2 {
-		font-size: 1.5rem;
-		margin-bottom: 1rem;
-		color: var(--cor-secundaria);
-	}
+    .cabecalho-secao p {
+        font-size: 1.125rem;
+        color: var(--cor-texto-secundario);
+    }
 
-	address {
-		font-style: normal;
-	}
+    .grid-contato {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
 
-	.grid-contato p {
-		margin-bottom: 0.5rem;
-	}
+    .grid-contato h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--cor-secundaria);
+    }
 
-	.grid-contato p:last-child {
-		margin-bottom: 0;
-	}
+    address {
+        font-style: normal;
+    }
+
+    .grid-contato p {
+        margin-bottom: 0.5rem;
+    }
+
+    .grid-contato p:last-child {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 768px) {
+        .imagem-fachada img {
+            height: 230px;
+        }
+    }
 </style>
